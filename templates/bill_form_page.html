@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bill Form Page</title>
+        <link rel="stylesheet" href="static/main.css">
+    </head>
+    <body>
+        <h2>
+            The Bill
+        </h2>
+        <p>
+            Fill in the form and click the button to download a pdf report about how much each flatmate has to pay
+        </p>
+        <form action={{url_for('download')}} method="POST">
+            {{billform.amount.label}} {{billform.amount}} <br>
+            {{billform.period.label}} {{billform.period}}
+            <hr>
+            <p>First Flatmate</p>
+            {{billform.name1.label}} {{billform.name1}} <br>
+            {{billform.days_in_the_house1.label}} {{billform.days_in_the_house1}}
+            <hr>
+            <p>Second Flatmate</p>
+            {{billform.name2.label}} {{billform.name2}} <br>
+            {{billform.days_in_the_house2.label}} {{billform.days_in_the_house2}}
+            <br>
+            {{billform.button}}
+            
+        </form> 
+        
+        
+        
+    </body>
+</html> 
